@@ -13,6 +13,7 @@
 		61ac151356166de56d4d77a63023c5e4 /* ofxARToolkitPlus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 200890a4c029aac1b71805309766fc05 /* ofxARToolkitPlus.cpp */; };
 		63020f16c7e8ded9801112417e67ad38 /* ofxCvImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = c6151136d101f857dae12722e3c42f4a /* ofxCvImage.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E332C3CB1636AFFB00CA7150 /* libARToolKitPlus.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E332C3CA1636AFFB00CA7150 /* libARToolKitPlus.dylib */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
@@ -135,6 +136,7 @@
 		9da0cbd43da38386eb04c9ae7ce0666e /* miniflann.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = miniflann.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/miniflann.hpp; sourceTree = SOURCE_ROOT; };
 		9ff9126184dfbde8a912373ebe9d2f9d /* highgui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = highgui.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv/highgui.h; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
+		E332C3CA1636AFFB00CA7150 /* libARToolKitPlus.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libARToolKitPlus.dylib; path = ../ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.dylib; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -216,6 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E332C3CB1636AFFB00CA7150 /* libARToolKitPlus.dylib in Frameworks */,
 				E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */,
 				E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
@@ -481,6 +484,22 @@
 			name = "3rd party frameworks";
 			sourceTree = "<group>";
 		};
+		E332C3CC1636B00700CA7150 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				E332C3CD1636B01000CA7150 /* osx */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		E332C3CD1636B01000CA7150 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				E332C3CA1636AFFB00CA7150 /* libARToolKitPlus.dylib */,
+			);
+			name = osx;
+			sourceTree = "<group>";
+		};
 		E4328144138ABC890047C5CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +605,7 @@
 		b8dfbd1843b9908bfd124ea3ad03d781 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				E332C3CC1636B00700CA7150 /* lib */,
 				3306925c5b3f879813ed432e63792456 /* ARToolKitPlus */,
 			);
 			name = libs;
@@ -819,6 +839,7 @@
 					../../../addons/ofxARToolkitPlus/libs/ARToolKitPlus/lib,
 					../../../addons/ofxARToolkitPlus/src,
 				);
+				LIBRARY_SEARCH_PATHS = ../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
@@ -827,6 +848,7 @@
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
+					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.dylib,
 				);
 			};
 			name = Debug;
@@ -884,6 +906,7 @@
 					../../../addons/ofxARToolkitPlus/libs/ARToolKitPlus/lib,
 					../../../addons/ofxARToolkitPlus/src,
 				);
+				LIBRARY_SEARCH_PATHS = ../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
@@ -892,6 +915,7 @@
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
+					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.dylib,
 				);
 			};
 			name = Release;
@@ -977,12 +1001,14 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../addons/ofxARToolkitPlus/libs/ARToolKitPlus/lib\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx\"";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
-					../../../addons/ofxARToolkitPlus/libs/ARToolKitPlus/lib/libARToolKitPlus.dylib,
+					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.dylib,
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
@@ -1070,12 +1096,14 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../addons/ofxARToolkitPlus/libs/ARToolKitPlus/lib\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx\"";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
-					../../../addons/ofxARToolkitPlus/libs/ARToolKitPlus/lib/libARToolKitPlus.dylib,
+					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.dylib,
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
