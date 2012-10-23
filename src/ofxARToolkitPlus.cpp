@@ -353,7 +353,11 @@ void ofxARToolkitPlus::getMultiMarkerTranslationAndOrientation(ofVec3f &translat
 		
 		// Copy and pass in the markers
 		int numberOfMarkers = tracker->getNumDetectedMarkers();
+#ifdef TARGET_WIN32
+		ARToolKitPlus::ARMarkerInfo *marker = new ARToolKitPlus::ARMarkerInfo[numberOfMarkers];
+#else
 		ARToolKitPlus::ARMarkerInfo marker[numberOfMarkers];
+#endif
 		for (int i=0; i<numberOfMarkers; i++) {
 			marker[i] = tracker->getDetectedMarker(i);
 		}
@@ -372,10 +376,13 @@ void ofxARToolkitPlus::getMultiMarkerTranslationAndOrientation(ofVec3f &translat
 						mm.trans[1][0], mm.trans[1][1], mm.trans[1][2], 0,
 						mm.trans[2][0], mm.trans[2][1], mm.trans[2][2], 0,
 						0, 0, 0, 1);
-		
+#ifdef TARGET_WIN32
+		free(marker);
+#endif
 	} else {
 		ofLog(OF_LOG_VERBOSE, "MultiMarkerConfig file NULL");
 	}
+
 }
 
 bool ofxARToolkitPlus::loadMultiMarkerFile(string filename) {
