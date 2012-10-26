@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		169d3c72fde6c5590a1616f500a456b4 /* ofxCvFloatImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7b6a03390302d5a2c9f0e4ab630ae8d6 /* ofxCvFloatImage.cpp */; };
+		1B43BDB7163A783D0006B708 /* libARToolKitPlus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B43BDB6163A783D0006B708 /* libARToolKitPlus.a */; };
 		1d5f3298c2fa073628012944b1efde88 /* ofxCvContourFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = c76de5c29bdbd2caa1dd0021a7376220 /* ofxCvContourFinder.cpp */; };
 		250a95ba26587be85db0a353e6e1dea2 /* ofxCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ce9c7160245b19131dae61282ee6cb53 /* ofxCvColorImage.cpp */; };
 		61ac151356166de56d4d77a63023c5e4 /* ofxARToolkitPlus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 200890a4c029aac1b71805309766fc05 /* ofxARToolkitPlus.cpp */; };
 		63020f16c7e8ded9801112417e67ad38 /* ofxCvImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = c6151136d101f857dae12722e3c42f4a /* ofxCvImage.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
-		E332C3CB1636AFFB00CA7150 /* libARToolKitPlus.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E332C3CA1636AFFB00CA7150 /* libARToolKitPlus.dylib */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
@@ -78,6 +78,7 @@
 		0cf0aa3895d28e97d8a1e4a938976234 /* ground_truth.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ground_truth.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/ground_truth.h; sourceTree = SOURCE_ROOT; };
 		114b872696817cc33990fc83feb1259e /* imgproc.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = imgproc.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/imgproc/imgproc.hpp; sourceTree = SOURCE_ROOT; };
 		1283479f655bbcfa6075d02a3c6b5ac4 /* config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = config.h; path = ../../../addons/ofxARToolkitPlus/libs/ARToolKitPlus/include/ARToolKitPlus/config.h; sourceTree = SOURCE_ROOT; };
+		1B43BDB6163A783D0006B708 /* libARToolKitPlus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARToolKitPlus.a; path = ../ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.a; sourceTree = "<group>"; };
 		1ac8df7ea7eb0dc96c4b782aa2d46521 /* Camera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Camera.h; path = ../../../addons/ofxARToolkitPlus/libs/ARToolKitPlus/include/ARToolKitPlus/Camera.h; sourceTree = SOURCE_ROOT; };
 		1e95efd35ed9c5d97f2f015ed292592d /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = timer.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/timer.h; sourceTree = SOURCE_ROOT; };
 		1fc662c417910f56d44e7a2cac7ed330 /* BCH.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BCH.h; path = ../../../addons/ofxARToolkitPlus/libs/ARToolKitPlus/include/ARToolKitPlus/extra/BCH.h; sourceTree = SOURCE_ROOT; };
@@ -136,7 +137,6 @@
 		9da0cbd43da38386eb04c9ae7ce0666e /* miniflann.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = miniflann.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/miniflann.hpp; sourceTree = SOURCE_ROOT; };
 		9ff9126184dfbde8a912373ebe9d2f9d /* highgui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = highgui.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv/highgui.h; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
-		E332C3CA1636AFFB00CA7150 /* libARToolKitPlus.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libARToolKitPlus.dylib; path = ../ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.dylib; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -218,7 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E332C3CB1636AFFB00CA7150 /* libARToolKitPlus.dylib in Frameworks */,
+				1B43BDB7163A783D0006B708 /* libARToolKitPlus.a in Frameworks */,
 				E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */,
 				E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
@@ -495,7 +495,7 @@
 		E332C3CD1636B01000CA7150 /* osx */ = {
 			isa = PBXGroup;
 			children = (
-				E332C3CA1636AFFB00CA7150 /* libARToolKitPlus.dylib */,
+				1B43BDB6163A783D0006B708 /* libARToolKitPlus.a */,
 			);
 			name = osx;
 			sourceTree = "<group>";
@@ -848,7 +848,7 @@
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
-					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.dylib,
+					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.a,
 				);
 			};
 			name = Debug;
@@ -915,7 +915,7 @@
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
-					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.dylib,
+					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.a,
 				);
 			};
 			name = Release;
@@ -1002,12 +1002,14 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../libs/ARToolKitPlus/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(OF_PATH)/addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx\"";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
-					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.dylib,
+					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.a,
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
@@ -1096,12 +1098,14 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../libs/ARToolKitPlus/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(OF_PATH)/addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx\"";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					../../../addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a,
-					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.dylib,
+					../../../addons/ofxARtoolkitPlus/libs/ARToolKitPlus/lib/osx/libARToolKitPlus.a,
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
