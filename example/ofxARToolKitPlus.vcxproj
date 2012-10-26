@@ -72,8 +72,7 @@
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>xcopy /e /i /y "$(ProjectDir)..\..\..\export\vs2010\*.dll" "$(ProjectDir)bin"
-xcopy /e /i /y "$(ProjectDir)..\..\..\addons\ofxARtoolkitPlus\libs\ARToolKitPlus\bin\*.dll" "$(ProjectDir)bin"</Command>
+      <Command>xcopy /e /i /y "$(ProjectDir)..\..\..\export\vs2010\*.dll" "$(ProjectDir)bin"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -101,8 +100,7 @@ xcopy /e /i /y "$(ProjectDir)..\..\..\addons\ofxARtoolkitPlus\libs\ARToolKitPlus
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>xcopy /e /i /y "$(ProjectDir)..\..\..\export\vs2010\*.dll" "$(ProjectDir)bin"
-xcopy /e /i /y "$(ProjectDir)..\..\..\addons\ofxARtoolkitPlus\libs\ARToolKitPlus\bin\*.dll" "$(ProjectDir)bin"</Command>
+      <Command>xcopy /e /i /y "$(ProjectDir)..\..\..\export\vs2010\*.dll" "$(ProjectDir)bin"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
