@@ -10,7 +10,8 @@ void testApp::setup(){
 	vidGrabber.initGrabber(width, height);
 	#else
 	vidPlayer.loadMovie("marker.mov");
-	vidPlayer.play();	
+	vidPlayer.play();
+	vidPlayer.setLoopState(OF_LOOP_NORMAL);
 	#endif
 	
 	colorImage.allocate(width, height);
@@ -55,7 +56,7 @@ void testApp::update(){
 	vidGrabber.grabFrame();
 	bool bNewFrame = vidGrabber.isFrameNew();
 	#else
-	vidPlayer.idleMovie();
+	vidPlayer.update();
 	bool bNewFrame = vidPlayer.isFrameNew();
 	#endif
 	
@@ -146,10 +147,10 @@ void testApp::draw(){
 		ofNoFill();
 		ofSetLineWidth(5);
 		ofSetHexColor(0xffffff);
-		glBegin(GL_LINES);
-		glVertex3f(0, 0, 0); 
-		glVertex3f(0, 0, 50);
-		glEnd();
+//		glBegin(GL_LINES);
+//		glVertex3f(0, 0, 0); 
+//		glVertex3f(0, 0, 50);
+//		glEnd();
 		
 		// Draw a stack of rectangles by offseting on the z axis
 		ofNoFill();
