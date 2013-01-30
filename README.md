@@ -1,13 +1,10 @@
 # ofxARToolKitPlus
 ========
 
-original ofxAddons from 
-https://github.com/karldd/ofxARToolkitPlus
-
 Introduction
 ------------
-
-https://github.com/PaintYourDragon/p9813 warpper
+original ofxAddons from 
+https://github.com/karldd/ofxARToolkitPlus
 
 Licence
 -------
