@@ -35,7 +35,7 @@ void ofxARToolkitPlus::setup(int w, int h) {
 }
 
 //--------------------------------------------------
-void ofxARToolkitPlus::setup(int w, int h, string camParamFile, string multiFile) {
+void ofxARToolkitPlus::setup(int w, int h, string camParamFile, string multiFile, int maxImagePatterns, int pattWidth, int pattHeight, int pattSamples, int maxLoadPatterns){
 	
 	width = w;
 	height = h;	
@@ -46,21 +46,14 @@ void ofxARToolkitPlus::setup(int w, int h, string camParamFile, string multiFile
 	c[1] = 0;
 	
 	// ----------------------------------  AR TK+ STUFF - ripped from the single marker demo app
-	
-    // create a tracker that does:
-    //  - 6x6 sized marker images
-    //  - samples at a maximum of 6x6
-    //  - can load a maximum of 32 patterns
-    //  - can detect a maximum of 32 patterns in one image
-//	tracker = new ARToolKitPlus::TrackerMultiMarker<6,6,6,32,32>(width,height);
     
 	// create a tracker that does:
-    //  - 6x6 sized marker images (required for binary markers)
+    //  - "pattWidth" x "pattHeight" sized marker images (6x6 required for binary markers)
     //  - samples at a maximum of 6x6
     //  - works with luminance (gray) images
-    //  - can load a maximum of 0 non-binary pattern
-    //  - can detect a maximum of 8 patterns in one image
-    tracker = new ARToolKitPlus::TrackerMultiMarker (width, height, 8, 6, 6, 6, 0);
+    //  - can load a maximum of "maxLoadPatterns" non-binary pattern
+    //  - can detect a maximum of "maxImagePatterns" patterns in one image
+    tracker = new ARToolKitPlus::TrackerMultiMarker (width, height, maxImagePatterns, pattWidth, pattHeight, pattSamples, maxLoadPatterns);
 //	const char* description = tracker->getDescription();
 //	printf("ARToolKitPlus compile-time information:\n%s\n\n", description);
 	

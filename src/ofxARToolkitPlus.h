@@ -25,8 +25,25 @@ class ofxARToolkitPlus  {
 	 * as well as the camera parameter file and the multi-marker config file 
 	 * The camera file can be created using GML and the instructions in the pdf below
 	 * http://graphics.cs.msu.ru/en/science/research/calibration/cpp
-	 * http://studierstube.icg.tu-graz.ac.at/doc/pdf/Stb_CamCal.pdf */ 
-	void setup(int w, int h, string camParamFile, string multiFile);
+	 * http://studierstube.icg.tu-graz.ac.at/doc/pdf/Stb_CamCal.pdf 
+	 *
+	 * You setup a custom initialziation to the tracker.
+     * These parameters control the way the toolkit warps a found
+     * marker to a perfect square. The square has size
+     * pattWidth * pattHeight, the projected
+     * square in the image is subsampled at a min of
+     * pattWidth/pattHeight and a max of pattSamples
+     * steps in both x and y direction
+     *  @param maxImagePatterns describes the maximum number of patterns that can be analyzed in a camera image.
+     *  @param pattWidth describes the pattern image width (must be 6 for binary markers)
+     *  @param pattHeight describes the pattern image height (must be 6 for binary markers)
+     *  @param pattSamples describes the maximum resolution at which a pattern is sampled from the camera image
+     *  (6 by default, must a a multiple of pattWidth and pattHeight).
+     *  @param maxLoadPatterns describes the maximum number of pattern files that can be loaded.
+     *  Reduce maxLoadPatterns and maxImagePatterns to reduce memory footprint.
+     */
+	void setup(int w, int h, string camParamFile, string multiFile, int maxImagePatterns = 8, int pattWidth = 6, int pattHeight = 6, int pattSamples = 6, int maxLoadPatterns = 0);
+
 	
 	///////////////////////////////////////////
 	// UPDATE
