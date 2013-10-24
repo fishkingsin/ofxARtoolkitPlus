@@ -54,3 +54,7 @@ https://launchpad.net/artoolkitplus
 
 +xcode example from 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/fishkingsin/ofxartoolkitplus/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
