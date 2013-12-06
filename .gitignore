@@ -17,3 +17,4 @@ obj/
 
 build/
 !data/
+*.xcuserstate
