@@ -53,7 +53,7 @@ void testApp::setup(){
 //--------------------------------------------------------------
 void testApp::update(){
 	#ifdef CAMERA_CONNECTED
-	vidGrabber.grabFrame();
+	vidGrabber.update();
 	bool bNewFrame = vidGrabber.isFrameNew();
 	#else
 	vidPlayer.update();
@@ -116,17 +116,18 @@ void testApp::draw(){
 		for(int i=0;i<corners.size();i++) {
 			ofCircle(corners[i].x, corners[i].y, 10);
 		}
+        // Homography
+        // Here we feed in the corners of an image and get back a homography matrix
+        ofMatrix4x4 homo = artk.getHomography(myIndex, displayImageCorners);
+        // We apply the matrix and then can draw the image distorted on to the marker
+        ofPushMatrix();
+        glMultMatrixf(homo.getPtr());
+        ofSetHexColor(0xffffff);
+        displayImage.draw(0, 0);
+        ofPopMatrix();
+
 	}
 	
-	// Homography
-	// Here we feed in the corners of an image and get back a homography matrix
-	ofMatrix4x4 homo = artk.getHomography(myIndex, displayImageCorners);
-	// We apply the matrix and then can draw the image distorted on to the marker
-	ofPushMatrix();
-	glMultMatrixf(homo.getPtr());
-	ofSetHexColor(0xffffff);
-	displayImage.draw(0, 0);
-	ofPopMatrix();
 	
 	
 	// ARTK 3D stuff

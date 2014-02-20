@@ -18,3 +18,15 @@ obj/
 build/
 !data/
 *.xcuserstate
+
+*.xcuserstate
+
+example/ofxARToolKitPlusExample.xcodeproj/xcshareddata/xcschemes/ofxARToolKitPlusExample Debug.xcscheme
+
+example/ofxARToolKitPlusExample.xcodeproj/xcshareddata/xcschemes/ofxARToolKitPlusExample Release.xcscheme
+
+example/ofxARToolKitPlusExample.xcodeproj/xcshareddata/xcschemes/ofxARToolKitPlusExample Release.xcscheme
+
+example/ofxARToolKitPlusExample.xcodeproj/project.xcworkspace/xcuserdata/jameskong.xcuserdatad/UserInterfaceState.xcuserstate
+
+example/ofxARToolKitPlusExample.xcodeproj/project.xcworkspace/xcuserdata/jameskong.xcuserdatad/UserInterfaceState.xcuserstate
